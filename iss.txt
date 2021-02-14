@@ -1,19 +1,20 @@
-There are 7 Astronauts currently on the International Space Station.
+Currently, there are 7 Astronauts aboard the ISS.
 
 They are: 
 
-Sergey Ryzhikov - on board the ISS
+ - Sergey Ryzhikov
 
-Kate Rubins - on board the ISS
+ - Kate Rubins
 
-Sergey Kud-Sverchkov - on board the ISS
+ - Sergey Kud-Sverchkov
 
-Mike Hopkins - on board the ISS
+ - Mike Hopkins
 
-Victor Glover - on board the ISS
+ - Victor Glover
 
-Shannon Walker - on board the ISS
+ - Shannon Walker
 
-Soichi Noguchi - on board the ISS
+ - Soichi Noguchi
 
 Your current latitude / longitude is: [39.4143, -77.4105]
+Your current location is: Frederick, Maryland, US
