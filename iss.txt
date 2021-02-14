@@ -1,0 +1,19 @@
+There are 7 Astronauts currently on the International Space Station.
+
+They are: 
+
+Sergey Ryzhikov - on board the ISS
+
+Kate Rubins - on board the ISS
+
+Sergey Kud-Sverchkov - on board the ISS
+
+Mike Hopkins - on board the ISS
+
+Victor Glover - on board the ISS
+
+Shannon Walker - on board the ISS
+
+Soichi Noguchi - on board the ISS
+
+Your current latitude / longitude is: [39.4143, -77.4105]
