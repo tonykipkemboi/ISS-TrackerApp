@@ -58,6 +58,6 @@ Thank you for contributing!
 
 This is a screenshot visual of the application running over n period of time to show the path taken by the ISS.
 
-![App Screenshot](https://github.com/tonykipkemboi/ISS_Tracker_Project/blob/static_visual.JPG?raw=true)
+![](https://github.com/tonykipkemboi/ISS_Tracker_Project/blob/master/static_visual.JPG?raw=true)
 
 
