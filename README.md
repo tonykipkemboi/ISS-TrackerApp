@@ -35,6 +35,13 @@ For more information, visit: https://www.nasa.gov/mission_pages/station and http
 
 Download or clone the repository.
 
+```bash
+git clone https://github.com/tonykipkemboi/ISS_Tracker_Application.git 
+```
+```bash
+cd ISS_Tracker_Application
+```
+
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the dependencies if not installed.
 
 ```bash
