@@ -4,12 +4,14 @@
 @Sources: nasa, wikipedia, and https://projects.raspberrypi.org/en/projects/where-is-the-space-station
 
 This app tracks the current location of the ISS and current Astronauts on board the ISS
-
 ISS = International Space Station
+The program starts by writing the names of current astronauts onboard the ISS into "iss.txt" file
+than proceeds to load the current location of ISS and starts tracking its path with a red line on 
+the map
 
 """
 
-# --------------------------------------------------------------------------------------------------------------------#
+# ---------------------------------------------------------------------------------------------------------------------
 # Import dependencies
 import json
 import turtle
@@ -19,7 +21,7 @@ import webbrowser
 
 import geocoder
 
-# --------------------------------------------------------------------------------------------------------------------#
+# ---------------------------------------------------------------------------------------------------------------------
 # Global variables
 # URL for the API's
 url_astro = 'http://api.open-notify.org/astros.json'
@@ -30,9 +32,12 @@ screen = turtle.Screen()
 iss = turtle.Turtle()
 
 
-# --------------------------------------------------------------------------------------------------------------------#
-# Return a list of astronauts currently aboard the ISS
+# ---------------------------------------------------------------------------------------------------------------------
 def astronauts_on_board_iss():
+    """
+    Returns a list of astronauts currently onboard the ISS 
+    in a *.txt file (iss.txt)
+    """
     # URL for the API to show astronauts onboard the ISS
     response_1 = urllib.request.urlopen(url_astro)
     result_1 = json.loads(response_1.read())
@@ -59,9 +64,13 @@ def astronauts_on_board_iss():
     return webbrowser.open("iss.txt")
 
 
-# --------------------------------------------------------------------------------------------------------------------#
-# Setup the world map and the ISS on turtle module
+# ---------------------------------------------------------------------------------------------------------------------
 def setup_world_map_and_iss():
+    """
+    Sets up the world map and the ISS gif images on the turtle module
+    (GUI)
+    The images have to be .gif to work
+    """
     screen.setup(1200, 635)
     screen.setworldcoordinates(-180, -90, 180, 90)
 
@@ -73,9 +82,12 @@ def setup_world_map_and_iss():
     iss.penup()
 
 
-# --------------------------------------------------------------------------------------------------------------------#
-# method to find current location of the ISS
+# ---------------------------------------------------------------------------------------------------------------------
 def locate_iss():
+    """
+    Method to find current location of the ISS 
+    using the Open Notify API
+    """
     # URL for the API to show current location of ISS
     response = urllib.request.urlopen(url_loc)
     result = json.loads(response.read())
@@ -92,9 +104,12 @@ def locate_iss():
     print("\nLongitude: " + str(lon))
 
 
-# --------------------------------------------------------------------------------------------------------------------#
-# draws path taken by ISS -> in 'real-time'
+# ---------------------------------------------------------------------------------------------------------------------
 def draw_iss_route():
+    """
+    Draws the path taken by ISS -> in 'real-time'
+    on the map
+    """
     # URL for the API to show current location of ISS
     response = urllib.request.urlopen(url_loc)
     result = json.loads(response.read())
@@ -119,12 +134,14 @@ def draw_iss_route():
     iss.goto(lon, lat)
 
 
-# --------------------------------------------------------------------------------------------------------------------#
-# function to execute the program
+# ---------------------------------------------------------------------------------------------------------------------
 def main():
-    print("===============================================================================================")
-    print("This is an app to track the ISS and the names of those currently on board the station! \nEnjoy!")
-    print("===============================================================================================")
+    """
+    Function to execute the entire program
+    """
+    print("###################")
+    print("# ISS TRACKER APP #")
+    print("###################")
     print(" ")
 
     # outputs a file with names of astronauts onboard the ISS
@@ -147,8 +164,10 @@ def main():
         screen.exitonclick()
 
 
-# --------------------------------------------------------------------------------------------------------------------#
-# top-level main scope script
+# ---------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
+    """
+    Top-level main scope script
+    """
     # execute only if run as a script
     main()
