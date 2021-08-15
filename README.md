@@ -2,7 +2,7 @@
 
 This is a simple app that tracks the current location of the ISS and Astronauts on board the ISS.
 
-(ISS == _International Space Station_)
+`ISS == _International Space Station_`
 
 ## Description
 
